@@ -3,13 +3,15 @@
 #include <string.h>
 #include <math.h> 
  
-void swap(int * array, int i, int j) {
+void swap(int * array, int i, int j)
+{
     int tmp = array[i];
     array[i] = array[j];
     array[j] = tmp;
 }
  
-void heap_it(int *array, int length, int root) {
+void heap_it(int *array, int length, int root)
+{
 
     int left = root * 2 + 1;
     int right = root * 2 + 2;
@@ -25,7 +27,8 @@ void heap_it(int *array, int length, int root) {
     }
 }
  
-void make_heap(int * array, int length) {
+void make_heap(int * array, int length)
+{
 
     int i = length / 2 - 1;
  
@@ -33,7 +36,8 @@ void make_heap(int * array, int length) {
         heap_it(array, length, i);
 }
  
-void heap_sort(int * array, int elements) {
+void heap_sort(int * array, int elements)
+{
 
     int end;
     
@@ -44,7 +48,8 @@ void heap_sort(int * array, int elements) {
     }
 }
 
-int my_atoi(char *str, int sum) {
+int my_atoi(char *str, int sum)
+{
 
 	if (*str == '\0') {
 		return sum;
@@ -54,7 +59,9 @@ int my_atoi(char *str, int sum) {
 	return my_atoi(str, sum);
 }
 
-void line(int count) {
+void line(int count)
+{
+
    int i;
 	
    for(i = 0;i < count-1;i++) {
@@ -64,7 +71,8 @@ void line(int count) {
    printf("=\n");
 }
 
-int same_string(char *first, char *second) {
+int same_string(char *first, char *second)
+{
 
 	int i = 0, flag;
 	
@@ -86,7 +94,8 @@ int same_string(char *first, char *second) {
 	}
 }
 
-int slen(char *c) {
+int slen(char *c)
+{
 
 	int i = 0;
 	for (i; c[i] != NULL; i++);

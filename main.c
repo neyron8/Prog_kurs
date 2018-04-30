@@ -3,7 +3,8 @@
 #include <string.h>
 #include "sort.h"
  
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
 
 	if (argc != 3){
 		printf("Not enough arguments\n");
@@ -11,15 +12,20 @@ int main(int argc, char *argv[]) {
 	}
 
 	int sum = 0, num = my_atoi(argv[2], sum);
-	int array[num], i, flag = 1;
+	int *array = malloc( sizeof(int) * num);
+	int i, flag = 1, helper;
 	if (num < 1){
 		printf("Incorrect value\n");
 		return 2;
 	}
     
+	helper = num;
 	printf("Unsorted:\n");
 	for ( i = 0; i < num; ++i ){
-		array[i] = rand() % 100;
+		array[i] = helper;
+		helper --;
+		//array[i] = i;
+		//array[i] = rand() % 100;
 		printf("%d ", array[i]);
 	}
 	if ((same_string (argv[1], "heap")) == 0){  
@@ -36,14 +42,20 @@ int main(int argc, char *argv[]) {
 		insert_sort(array, num);
     	printf("\nSorted by Insertion Sort:\n");
 		for ( i = 0; i < num; ++i ){
-			printf("%d ", array[i]);
+			//printf("%d ", array[i]);
 		}
 		printf("\n");
 	}
+
 	if (flag == 1) {
 		printf("\nIncorrect argument\n");
+		free(array);
+		array = NULL;
 		return -2;
 	}
+
+	free(array);
+	array = NULL;
 	
 	return 0;
 }

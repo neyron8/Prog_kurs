@@ -1,7 +1,6 @@
 #ifndef SORT_H
 #define SORT_H
 
-
 void swap(int * array, int i, int j);
 void heap_it(int * array, int length, int root);
 void make_heap(int * array, int length);

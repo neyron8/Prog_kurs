@@ -10,7 +10,8 @@ sort.o: sort.c sort.h
 main.o: main.c
 	gcc -c main.c
 
-.PHONY: clean
+.PHONY: clean 
 clean:
 	rm -rf *.o
+
 
