@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <math.h> 
  
 void swap(int * array, int i, int j)
@@ -54,7 +53,7 @@ int my_atoi(char *str, int sum)
 	if (*str == '\0') {
 		return sum;
 	}
-	sum = sum + (*str - 48) * pow(10, strlen(str) - 1);
+	sum = sum + (*str - 48) * pow(10, slen(str) - 1);
 	str = str + 1;
 	return my_atoi(str, sum);
 }
