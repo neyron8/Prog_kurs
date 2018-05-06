@@ -13,5 +13,9 @@ main.o: main.c
 .PHONY: clean 
 clean:
 	rm -rf *.o
+.PHONY: export 
+export:
+	export LD_LIBRARY_PATH=.
+
 
 
