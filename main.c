@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 		//helper --;
 		//array[i] = i;
 		array[i] = rand() % 1000;
-		//printf("%d ", array[i]);
+		printf("%d ", array[i]);
 	}
 	if ((same_string (argv[1], "heap")) == 0){  
 		flag = 0;  
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 		end = clock();
     	printf("\nHeap Sort ---->\n");
 		for ( i = 0; i < num; ++i ){
-			//printf("%d ", array[i]);
+			printf("%d ", array[i]);
 		}
 		printf("\n");
 		printf("%f seconds\n", (end - start) / (CLOCKS_PER_SEC));
@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 		end = clock();
     	printf("\nInsertion Sort ---->\n");
 		for ( i = 0; i < num; ++i ){
-			//printf("%d ", array[i]);
+			printf("%d ", array[i]);
 		}
 		printf("\n");
 		printf("%f seconds\n", (end - start) / (CLOCKS_PER_SEC));

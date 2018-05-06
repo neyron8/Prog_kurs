@@ -54,6 +54,10 @@ int my_atoi(char *str, int sum)
 	if (*str == '\0') {
 		return sum;
 	}
+    if ((*str <= 'Z' && *str >= 'A') ||((*str <= 'z' && *str >= 'a'))) {
+        printf("ERROR INPUT\n");
+		exit(2);
+	}
 	sum = sum + (*str - 48) * pow(10, slen(str) - 1);
 	str = str + 1;
 	return my_atoi(str, sum);
